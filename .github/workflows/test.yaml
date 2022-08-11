@@ -12,4 +12,4 @@ jobs:
     secrets: inherit
     with:
       event_name: ${{ github.event_name }}
-      event_payload: ${{ github.event }}
+      event_payload: ${{ toJSON(github.event) }}

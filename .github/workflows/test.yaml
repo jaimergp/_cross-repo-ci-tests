@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-workflow-passing-data:
+    uses: napari/packaging/.github/workflows/make_bundle_conda.yml@main
+    with:
+      event_name: ${{ github.event_name }}

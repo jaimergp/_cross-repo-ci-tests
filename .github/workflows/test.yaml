@@ -8,6 +8,6 @@ on:
 
 jobs:
   call-workflow-passing-data:
-    uses: napari/packaging/.github/workflows/make_bundle_conda.yml@main
+    uses: napari/packaging/.github/workflows/make_bundle_conda.yml@always-pyside
     with:
       event_name: ${{ github.event_name }}
